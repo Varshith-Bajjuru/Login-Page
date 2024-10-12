@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            background-image: radial-gradient(circle, #ffffff 1px, transparent 1px);
+            background-size: 40px 40px; /* Increased size for more space between dots */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #ffffff;
+        }
+
+        .login-container {
+            background-color: rgba(30, 30, 30, 0.9); /* Slightly transparent to show dots behind */
+            padding: 3rem; /* Increased padding for a larger form */
+            border-radius: 10px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+            width: 400px; /* Increased width for a larger form */
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 1.5rem; /* Added more space below the heading */
+            font-size: 1.75rem; /* Increased font size for the title */
+        }
+
+        label {
+            display: block;
+            margin-top: 1.25rem;
+            text-align: left;
+            font-weight: bold;
+            color: #e0e0e0;
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 0.75rem; /* Increased padding for inputs */
+            margin-top: 0.5rem;
+            border: 1px solid #333;
+            border-radius: 5px;
+            outline: none;
+            background-color: #2c2c2c;
+            color: #ffffff;
+        }
+
+        input[type="text"]:focus, input[type="password"]:focus {
+            border-color: #007bff;
+            background-color: #3a3a3a;
+        }
+
+        button {
+            width: 100%;
+            padding: 0.9rem; /* Increased button size */
+            margin-top: 1.5rem;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        button.secondary {
+            background-color: #6c757d;
+        }
+
+        button.secondary:hover {
+            background-color: #5a6268;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h1>Login</h1>
+        <form action="/success" method="POST">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            
+            <button type="submit">Login</button>
+        </form>
+
+        <form action="/adduser" method="GET">
+            <button type="submit" class="secondary">Add User</button>
+        </form>
+    </div>
+</body>
+</html>

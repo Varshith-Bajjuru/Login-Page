@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <style>
+        body {
+            background-color: black;
+            background-image: radial-gradient(circle, white 1px, transparent 1px);
+            background-size: 20px 20px; /* Size of the dots */
+            color: white;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 400px;
+            margin: 100px auto; /* Centering the form */
+            padding: 30px; /* Added padding for better spacing */
+            background: rgba(0, 0, 0, 0.85); /* Slightly transparent background */
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 30px; /* Space below the heading */
+            font-size: 26px;
+        }
+        
+        label {
+            display: block;
+            margin: 15px 0 5px; /* Space above and below the labels */
+            font-weight: bold;
+        }
+        
+        input {
+            width: 100%;
+            padding: 15px; /* Increased padding */
+            margin-bottom: 15px; /* Space below each input */
+            border: 1px solid #fff;
+            border-radius: 5px;
+            background: transparent;
+            color: white;
+            font-size: 16px;
+        }
+        
+        input::placeholder {
+            color: rgba(255, 255, 255, 0.7); /* Light color for placeholders */
+        }
+        
+        input:focus {
+            outline: none;
+            border-color: #00aaff; /* Focus color */
+            box-shadow: 0 0 5px rgba(0, 170, 255, 0.5); /* Focus effect */
+        }
+        
+        button {
+            width: 100%;
+            padding: 15px; /* Padding for button */
+            margin-top: 10px; /* Space above the button */
+            background-color: #00aaff;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 18px; /* Slightly larger font for button */
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+        }
+        
+        button:hover {
+            background-color: #0088cc; /* Darker shade on hover */
+            transform: scale(1.05); /* Slightly enlarge button on hover */
+        }
+        
+        button:active {
+            transform: scale(0.95); /* Slightly shrink button on click */
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Create User Account</h1>
+        <form id="registrationForm" action="/getuser" method="POST">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            
+            <label for="confirmPassword">Re-enter Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" required>
+            
+            <button type="submit">Create Account</button>
+        </form>
+    </div>
+</body>
+</html>

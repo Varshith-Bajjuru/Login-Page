@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Success</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #121212; /* Dark background */
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            background-image: radial-gradient(#ffffff 1px, #121212 1px);
+            background-size: 10px 10px; /* Adjust the size of the dots */
+        }
+        
+        .container {
+            text-align: center;
+            background-color: #1e1e1e; /* Dark gray container */
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+            width: 400px;
+        }
+        
+        .success-message h1 {
+            color: #4CAF50; /* Bright green success message */
+            margin-bottom: 20px;
+            font-size: 2.5em;
+        }
+        
+        .success-message p {
+            color: #ccc;
+            margin-bottom: 30px;
+            font-size: 1.2em;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50; /* Button color */
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .btn:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+            }
+        
+            .success-message h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="success-message">
+            <h1>Login Successful!</h1>
+            <p>Welcome back, you have successfully logged in.</p>
+            <form action="/" method="get">
+                <button type="submit" class="btn">Go to Dashboard</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
