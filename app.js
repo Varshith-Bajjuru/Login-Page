@@ -3,7 +3,9 @@ import pg from "pg"
 import bodyParser from "body-parser"
 import { dirname } from "path";
 import { fileURLToPath } from "url";
+import dotenv from 'dotenv'
 
+dotenv.config()
 const port = 3000
 const app = express()
 
@@ -14,8 +16,8 @@ app.use(express.static("public"));
 const db = new pg.Client({
     user : "postgres",
     host : "localhost",
-    database : "varshith",
-    password : "varshith@123",
+    database : process.env.database,
+    password : process.env.password,
     port : 5432
 })
 db.connect()
